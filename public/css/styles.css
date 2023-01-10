@@ -1,0 +1,143 @@
+/* comportement des elements dans la page d'accueil */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Tw Cen MT', sans-serif;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100vh;
+    background:url('images/image1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+nav .logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    justify-content:flex-end;
+    flex: 1;
+    padding-right: 40px;
+    text-align: right;
+    list-style-type: none ;
+} 
+
+ul li{
+    margin-right: 10px;
+
+}
+
+ul li a{
+    position: relative;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 16pxs;
+}
+
+ul li a::after {
+   content: '';
+   background: orange;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 0;
+   height: 3px;
+   transform: translate(-50%, -5px);
+   transition: 0.3s;
+}
+ul li a:hover::after {
+    width: 38%;
+}
+
+.site {
+    position: absolute;
+    bottom: 10%;
+    color: white;
+}
+
+.site p{
+    font-size: 50px;
+    font-weight: boid;
+
+}
+.site h1{
+    font-size: 30px;
+    line-height: 30px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px blue;
+   background: url('ligne.jpg');
+   -webkit-background-clip: text;
+   background-position: 0 0;
+   animation: animate 20s linear 2s infinite alternate;
+}
+
+@keyframes animate {
+    100%{
+        background-position: -500px 0;
+    }
+     
+}
+
+.site h3{
+    font-size: 40px;
+    font-weight: 500;
+}
+.site .bas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.bas a{
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    margin-right: 40px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.bas a:hover{
+   background-color: white;
+   color:blue; 
+}
+.bas span{
+    font-size: 18px;
+    color: brown;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left:10px ;
+    line-height: 2;
+}
+.triche{
+    position: absolute;
+    bottom: 8%;
+    right: -800px;
+}
+.triche a{
+    padding:0;
+    margin-right: 0;
+}

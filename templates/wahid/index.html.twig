@@ -1,0 +1,42 @@
+{# Fichier "templete" la racine de mon site #}
+{%extends 'base.html.twig'%}
+
+{# titre de la page#}
+{% block title%}Accueil du site{% endblock %}
+
+{# le css de la page#}
+{% block stylesheets %}
+ <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{# le contenu html de cette page#}
+{% block body %}
+ <div class="debut">
+        <nav>
+        <img src={{ asset('images/logo.jpg')}} class="logo" alt="logo du site">
+        <ul> 
+            <li> <a href="#">accueil</a></li>
+            <li> <a href="#">formulaire</a></li>
+            <li> <a href="#"> CV</a></li>
+        </ul>
+    </nav>
+    <div class="site">
+        <p>Bienvenu dans mon....</p>
+         <h3>E-Portfolio</h3>
+         <h1>Ce n'est pas un refus, qui va vous empêcher de rêver. Souriez et aller de l'avant! </h1>
+         <div class="bas">
+            <span> 
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                 Facere excepturi placeat commodi pariatur esse voluptatum quam debitis, 
+                 cum quibusdam quos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                 Libero aut tenetur velit?
+
+            </span>
+         </div>
+         <button type="button" href="/wahid/plus" class="btn btn-primary btn-lg">Pour en savoir plus</button>
+    </div>
+    <div class="triche">
+        <a href="#"><img src="help.jpg" width="40px" alt=""></a>
+    </div>
+    </div>
+{% endblock %}
