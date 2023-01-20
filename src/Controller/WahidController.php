@@ -23,4 +23,36 @@ class WahidController extends AbstractController
             'controller_name' => 'WahidController',
         ]);
     }
+    
+    #[Route('/wahid/cv', name: 'app_wahid__cv')]
+    public function cv(): Response
+    {
+        return $this->render('wahid/cv.html.twig', [
+            'controller_name' => 'WahidController',
+        ]);
+    }
+
+    #[Route('/wahid/formul', name: 'app_wahid_cv')]
+    public function formul(): Response
+    {
+        return $this->render('wahid/formul.html.twig', [
+            'controller_name' => 'WahidController',
+        ]);
+    }
+
+    #[Route('/wahid/portfolio', name: 'app_wahid_portfolio')]
+    public function portfolio(): Response
+    {
+        return $this->render('wahid/portfolio.html.twig', [
+            'controller_name' => 'WahidController',
+        ]);
+    }
+
+    #[Route('/wahid/change', name: 'app_wahid_change')]
+    public function change(): Response
+    {
+        return $this->render('wahid/change.html.twig', [
+            'controller_name' => 'WahidController',
+        ]);
+    }
 }

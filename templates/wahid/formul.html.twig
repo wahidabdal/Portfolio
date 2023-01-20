@@ -1,0 +1,80 @@
+{# Fichier "templete" la racine de mon site #}
+{% extends 'base.html.twig' %}
+
+{# titre de la page#}
+{% block title%} Formulaire
+{% endblock %}
+
+{# le css de la page#}
+{% block stylesheets %}
+ <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+{# le contenu html de cette page#}
+{% block body %}
+<div class="container" id=" formul">
+             <h1 class="ts">Formulaire de téléchargement</h1>
+             <form>
+             
+               <fieldset> 
+                 <div class="form-group">
+                   <label class="td" for="nom">Nom</label>
+                   <input type="text"  class="form-control" id="inputFieldId"  placeholder="ex: Mohamed GISCAR" required >
+                   <div class="erreur">*</div>
+                 </div>
+
+                 <div class="form-group">
+                   <label class="poot" for="number">Numéro</label>
+                   <input  class="form-control" id="inputFieldId" type="text" pattern="[0-9]+" placeholder="ex: 04" required >
+                   <div class="erreur">*</div>
+                 </div>
+                 
+                 <div class="form-group">
+                   <label class="lid" for="email">Mail</label>
+                   <input type="email"  class="form-control" id="inputFieldId"  placeholder=" ex: mohamed.giscar@etc.com" required>
+                   <div class="erreur">*</div>
+                 </div>
+                 
+                 <div class="form-group">
+                   <label class="titi" for="nom">Nom d'entreprise</label>
+                   <input type="text"  class="form-control" id="inputFieldId"  placeholder="ex: Tourner">
+                 </div>
+
+                 <div class="form-group">
+                   <label class="tart" for="selection">selectionner une page</label>
+                   <select id="selection" class="form-control">
+                     <option value="">Liste de choix...</option>
+                     <optgroup label="Groupe d'options 1">
+                       <option value="">CV</option>
+                       <option value="">Portfolio</option>
+                       <option value="">loisirs</option>
+                   </select>
+                 </div>
+                 <div class="form-group">
+                   <label class="cool" color="white" for="bio">Message</label>
+                   <textarea class="form-control" id="bio" rows="3"></textarea>
+                 </div>
+               </fieldset>
+               <a type="button" class="btn btn-primary" id="inputFieldId" href="public/cv."  data-toggle="button" aria-pressed="false" autocomplete="off" id="downloadButtonId" disabled download>Télécharger</a>
+             </form>
+         </div>
+
+         <script>
+          var inputField = document.getElementById("inputFieldId");
+          var content = '/wahid/cv';
+          var blob = new Blob([content], { type: 'text/pdf' });
+          var url = URL.createObjectURL(blob);
+          document.getElementById("downloadButtonId").href = url;
+          var downloadButton = document.getElementById("downloadButtonId");
+          inputField.addEventListener("input", function() {
+          if (inputField.value === "") {
+          downloadButton.disabled = true;
+          } else {
+              downloadButton.disabled = false;
+            }
+          });
+         
+          </script>
+<footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">BUT R&T 2022-2023, Wahidpro</div></div>
+        </footer>  
+{% endblock %}

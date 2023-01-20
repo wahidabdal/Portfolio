@@ -9,34 +9,52 @@
  <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 {% endblock %}
 
+
 {# le contenu html de cette page#}
 {% block body %}
- <div class="debut">
-        <nav>
-        <img src={{ asset('images/logo.jpg')}} class="logo" alt="logo du site">
-        <ul> 
-            <li> <a href="#">accueil</a></li>
-            <li> <a href="#">formulaire</a></li>
-            <li> <a href="#"> CV</a></li>
-        </ul>
-    </nav>
-    <div class="site">
-        <p>Bienvenu dans mon....</p>
-         <h3>E-Portfolio</h3>
-         <h1>Ce n'est pas un refus, qui va vous empêcher de rêver. Souriez et aller de l'avant! </h1>
-         <div class="bas">
-            <span> 
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                 Facere excepturi placeat commodi pariatur esse voluptatum quam debitis, 
-                 cum quibusdam quos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                 Libero aut tenetur velit?
-
-            </span>
-         </div>
-         <button type="button" href="/wahid/plus" class="btn btn-primary btn-lg">Pour en savoir plus</button>
-    </div>
-    <div class="triche">
-        <a href="#"><img src="help.jpg" width="40px" alt=""></a>
-    </div>
-    </div>
+<!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Wahidpro</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/wahid/plus">Me connaître</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/wahid/cv">CV</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/wahid/portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/wahid/formul">Formulaire de téléchargement CV</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+  <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">Bienvenu dans mon site !</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5">Je suis étudiant en Bachelor en Réseaux et Télécommunications, passionné par les technologies de l'information et
+                        de la communication et impatient de partager mes connaissances et mon expérience avec vous sur ce site web.</p>
+                </div>
+            </div>
+        </header>
+        <!-- personal information-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">ABDALLAH ATTOUMANE Wahid</h2>
+                        <hr class="divider divider-light" />
+                        <p class="text-white-75 mb-4">wahidattoumane@gmail.com</p>
+                        <a class="btn btn-light btn-xl" href="/wahid/plus">Pour en savoir plus!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+      <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">BUT R&T 2022-2023, Wahidpro</div></div>
+        </footer>  
 {% endblock %}

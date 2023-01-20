@@ -1,1 +1,58 @@
+{# Fichier "templete" la racine de mon site #}
 {%extends 'base.html.twig'%}
+
+{# titre de la page#}
+{% block title%}mes loisirs{% endblock %}
+
+{# le css de la page#}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+{# le contenu html de cette page#}
+{% block body %}
+<div class="sartp">
+ <div class="imag-container">
+  <img src="https://cdn.pixabay.com/photo/2016/11/14/05/21/children-1822688_960_720.jpg" alt="photo de football">
+</div>
+
+<div class="imag-container music">
+  <img src="https://cdn.pixabay.com/photo/2020/04/15/14/45/microphone-5046876_960_720.jpg" alt="photo de music">
+</div>
+
+<div class="imag-container  nation">
+  <img src="https://cdn.pixabay.com/photo/2015/09/05/19/57/swimming-924895_960_720.jpg" alt="photo de nation">
+</div>
+
+<div class="imag-container mangas-animé">
+  <img src="https://cdn.pixabay.com/photo/2015/09/20/22/09/anime-948925_960_720.jpg" alt="photo de mangas animé">
+</div>
+<div class="imag-container">
+  <img src="https://cdn.pixabay.com/photo/2016/05/09/09/51/team-1381084_960_720.jpg" alt="photo de jeux de société">
+</div>
+
+<div class="imag-container jeux-vidéo">
+  <img src="https://cdn.pixabay.com/photo/2021/09/07/07/11/joysticks-6603119_960_720.jpg" alt="photo de jeux vidéo">
+</div>
+
+</div>
+
+<style type="text/css"> 
+.imag-container {
+  width: 930px;
+  height: 600px;
+  overflow: hidden;
+ 
+}
+
+.imag-container img {
+  width: 100%;
+  height: auto;
+  
+}
+.music , .mangas-animé , .jeux-vidéo {
+  float: right;
+
+}
+
+</style>
+{% endblock %}
