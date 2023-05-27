@@ -55,4 +55,12 @@ class WahidController extends AbstractController
             'controller_name' => 'WahidController',
         ]);
     }
+
+    #[Route('/wahid/formul/recup', name: 'app_wahid_change_recup')]
+    public function recup(): Response
+    {
+        return $this->render('wahid/recupération_données.php', [
+            'controller_name' => 'WahidController',
+        ]);
+    }
 }
